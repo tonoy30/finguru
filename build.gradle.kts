@@ -25,15 +25,15 @@ dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-content-negotiation-jvm")
     implementation("io.ktor:ktor-serialization-gson-jvm")
-    implementation("io.ktor:ktor-server-swagger-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-
+    implementation("io.ktor:ktor-server-cors:$ktor_version")
     // mongodb
     implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.1.0")
     //Koin Dependency Injection
     implementation("io.insert-koin:koin-ktor:3.5.6")
     implementation("io.insert-koin:koin-logger-slf4j:3.5.6")
 }
+

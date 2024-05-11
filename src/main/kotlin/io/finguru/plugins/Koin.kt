@@ -19,7 +19,9 @@ fun Application.configureKoin() {
                         ?: throw RuntimeException("Failed to access MongoDB URI.")
                 )
             }
-            single { get<MongoClient>().getDatabase(environment.config.property("ktor.mongo.database").getString()) }
+            single {
+                get<MongoClient>().getDatabase(environment.config.property("ktor.mongo.database").getString())
+            }
         }, module {
             single<PartnerRepository> { PartnerRepositoryImpl(get()) }
         })

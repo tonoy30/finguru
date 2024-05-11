@@ -9,6 +9,6 @@ interface PartnerRepository {
     suspend fun findAll(): List<Partner>
     suspend fun findById(id: ObjectId): Partner?
     suspend fun create(entity: Partner): BsonValue?
-    suspend fun update(entity: Partner): Long
+    suspend fun update(id: ObjectId, entity: Partner): Long
     suspend fun delete(id: ObjectId): Long
 }
